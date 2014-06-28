@@ -1,0 +1,126 @@
+// ---------------------------------------------------------------------------
+// Imports
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+body  {
+	background-color: black;
+}
+.container {
+	padding-top:50px;
+	height:1000px;
+}
+
+*{font-family: lato};
+
+.v {
+	margin: 0 auto;
+  	width: 50%;
+}
+
+	.idea {
+		font-size:70px;
+		font-weight: 400;
+		position: absolute;
+		left: 175px;
+		top: 700px;
+		color: #c80f0c;
+		opacity: 0;	
+	}
+
+@media (min-width: 1033px) and (max-width: 1052px){
+	.idea  {
+		-webkit-transition: 1s;
+	    transition: 1s;
+		-webkit-transition-delay: 1s; /* Safari */
+		transition-delay: 1s;
+		opacity: 1;
+		top: 730px;
+			span{
+				float: right;
+				font-weight: 400;
+				font-size: 65px;
+			}
+	}
+}
+.symbol {
+		text-align: center;
+		font-size:35px;
+		font-weight: 400;
+		position: absolute;
+		left: 625px;
+		top: 450px;
+		color: #c80f0c;
+		opacity: 0;	
+	}
+	@media (min-width: 2033px) and (max-width: 2052px){
+	.symbol  {
+		line-height: 80px;
+		-webkit-transition: 1s;
+	    transition: 1s;
+		-webkit-transition-delay: 1s; /* Safari */
+		transition-delay: 1s;
+		opacity: 1;
+		top: 490px;
+			span{
+				float: right;
+				font-weight: 400;
+				font-size: 35px;
+			}
+	}
+}
+.remember {
+		text-align: center;
+		font-size:35px;
+		font-weight: 400;
+		position: absolute;
+		left: 950px;
+		top: 350px;
+		color: #c80f0c;
+		opacity: 0;	
+	}
+	@media (min-width: 3033px) and (max-width: 3052px){
+	.remember  {
+		line-height: 80px;
+		-webkit-transition: 1s;
+	    transition: 1s;
+		-webkit-transition-delay: 1s; /* Safari */
+		transition-delay: 1s;
+		opacity: 1;
+		top: 370px;
+			span{
+				float: right;
+				font-weight: 400;
+				font-size: 35px;
+			}
+	}
+}
+//3033 3052
+
+
+.cube {
+	float: left;
+	width: 10px;
+	height: 10px;
+	border:0px solid red;
+	background-image: url('../images/v.jpg');
+
+}
+
+@for $w from 0 through 49 {
+	@for $h from 0 through 49 {
+
+		.v#{$w*50+$h}{ 
+		    background-position: -#{$h*10}px -#{$w*10}px;
+		}
+	}
+}
+//h1
+.view {
+	text-align: center;
+	color: #d3d3d3;
+	font-weight: 300;
+	padding-bottom: 50px;
+}
+
